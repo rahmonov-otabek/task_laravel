@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AuhtController;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,13 +16,16 @@ use App\Http\Controllers\AuhtController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-
-Route::post('register', [AuhtController::class, 'register']);
-Route::post('login', [AuhtController::class, 'login']);
-
-Route::middleware('auth:sanctum')->post('logout', [AuhtController::class, 'logout']);
-
+ 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('register', [AuhtController::class, 'register']);
+Route::post('login', [AuhtController::class, 'login']);
+Route::middleware('auth:sanctum')->post('logout', [AuhtController::class, 'logout']);
+
+Route::apiResource('users', UsersController::class);
+
+
 
