@@ -30,6 +30,7 @@ Route::apiResource('users', UsersController::class);
 
 Route::get('regions', [MainController::class, "regionsList"]);
 Route::get('districts', [MainController::class, "districtsList"]);
+Route::get('currencies', [MainController::class, "currencies"]);
 
 
 
