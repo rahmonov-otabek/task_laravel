@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AuhtController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,9 @@ Route::post('login', [AuhtController::class, 'login']);
 Route::middleware('auth:sanctum')->post('logout', [AuhtController::class, 'logout']);
 
 Route::apiResource('users', UsersController::class);
+
+Route::get('regions', [MainController::class, "regionsList"]);
+Route::get('districts', [MainController::class, "districtsList"]);
 
 
 
