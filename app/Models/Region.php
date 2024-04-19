@@ -18,4 +18,9 @@ class Region extends Model
     {
         return $this->hasMany(District::class, 'region_id');
     }
+
+    public function branches()
+    {
+        return $this->hasMany(Branch::class, 'region_id');
+    }
 }
