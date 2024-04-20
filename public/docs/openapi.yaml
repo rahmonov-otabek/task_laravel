@@ -26,15 +26,15 @@ paths:
                 full_name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ysymjm
+                  example: xosswjegj
                 phone_number:
                   type: string
                   description: 'Must not be greater than 13 characters.'
-                  example: dhsahye
+                  example: ikaelwnb
                 password:
                   type: string
                   description: 'Must be at least 6 characters.'
-                  example: iLQCC;.S`w4
+                  example: IU(kKe|xNf<Hj^ve
               required:
                 - full_name
                 - phone_number
@@ -59,11 +59,11 @@ paths:
                 phone_number:
                   type: string
                   description: ''
-                  example: voluptatem
+                  example: perferendis
                 password:
                   type: string
                   description: ''
-                  example: quos
+                  example: quaerat
               required:
                 - phone_number
                 - password
@@ -99,13 +99,13 @@ paths:
                       brand:
                         id: 1
                         name: Texnomart
-                        image: 1713615145.texnomart.png
-                        created_at: '2024-04-20T12:12:25.000000Z'
-                        updated_at: '2024-04-20T12:12:25.000000Z'
+                        image: 1713636759.texnomart.png
+                        created_at: '2024-04-20T18:12:40.000000Z'
+                        updated_at: '2024-04-20T18:12:40.000000Z'
                       region_id: 14
                       district_id: 207
-                      created_at: '2024-04-20T12:13:04.000000Z'
-                      updated_at: '2024-04-20T12:13:04.000000Z'
+                      created_at: '2024-04-20T18:23:42.000000Z'
+                      updated_at: '2024-04-20T18:23:42.000000Z'
                 properties:
                   data:
                     type: array
@@ -116,13 +116,13 @@ paths:
                         brand:
                           id: 1
                           name: Texnomart
-                          image: 1713615145.texnomart.png
-                          created_at: '2024-04-20T12:12:25.000000Z'
-                          updated_at: '2024-04-20T12:12:25.000000Z'
+                          image: 1713636759.texnomart.png
+                          created_at: '2024-04-20T18:12:40.000000Z'
+                          updated_at: '2024-04-20T18:12:40.000000Z'
                         region_id: 14
                         district_id: 207
-                        created_at: '2024-04-20T12:13:04.000000Z'
-                        updated_at: '2024-04-20T12:13:04.000000Z'
+                        created_at: '2024-04-20T18:23:42.000000Z'
+                        updated_at: '2024-04-20T18:23:42.000000Z'
                     items:
                       type: object
                       properties:
@@ -143,13 +143,13 @@ paths:
                               example: Texnomart
                             image:
                               type: string
-                              example: 1713615145.texnomart.png
+                              example: 1713636759.texnomart.png
                             created_at:
                               type: string
-                              example: '2024-04-20T12:12:25.000000Z'
+                              example: '2024-04-20T18:12:40.000000Z'
                             updated_at:
                               type: string
-                              example: '2024-04-20T12:12:25.000000Z'
+                              example: '2024-04-20T18:12:40.000000Z'
                         region_id:
                           type: integer
                           example: 14
@@ -158,10 +158,10 @@ paths:
                           example: 207
                         created_at:
                           type: string
-                          example: '2024-04-20T12:13:04.000000Z'
+                          example: '2024-04-20T18:23:42.000000Z'
                         updated_at:
                           type: string
-                          example: '2024-04-20T12:13:04.000000Z'
+                          example: '2024-04-20T18:23:42.000000Z'
       tags:
         - Branch
       security: []
@@ -183,19 +183,19 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: quia
+                  example: omnis
                 brand_id:
                   type: string
                   description: ''
-                  example: sed
+                  example: et
                 region_id:
                   type: string
                   description: ''
-                  example: vel
+                  example: occaecati
                 district_id:
                   type: string
                   description: ''
-                  example: veritatis
+                  example: quasi
                 images:
                   type: array
                   description: 'Must be an image.'
@@ -227,51 +227,45 @@ paths:
                   brand_id: 1
                   region_id: 14
                   district_id: 207
-                  created_at: '2024-04-20T12:13:04.000000Z'
-                  updated_at: '2024-04-20T12:13:04.000000Z'
+                  created_at: '2024-04-20T18:23:42.000000Z'
+                  updated_at: '2024-04-20T18:23:42.000000Z'
                   brand:
                     id: 1
                     name: Texnomart
-                    image: 1713615145.texnomart.png
-                    created_at: '2024-04-20T12:12:25.000000Z'
-                    updated_at: '2024-04-20T12:12:25.000000Z'
+                    image: 1713636759.texnomart.png
+                    created_at: '2024-04-20T18:12:40.000000Z'
+                    updated_at: '2024-04-20T18:12:40.000000Z'
                   images:
                     -
                       id: 1
-                      image: 1713615184.1.jpg
+                      image: 1713637423.1.jpg
                       branch_id: 1
-                      created_at: '2024-04-20T12:13:04.000000Z'
-                      updated_at: '2024-04-20T12:13:04.000000Z'
+                      created_at: '2024-04-20T18:23:43.000000Z'
+                      updated_at: '2024-04-20T18:23:43.000000Z'
                     -
                       id: 2
-                      image: 1713615184.2.jpg
+                      image: 1713637423.2.jpg
                       branch_id: 1
-                      created_at: '2024-04-20T12:13:04.000000Z'
-                      updated_at: '2024-04-20T12:13:04.000000Z'
+                      created_at: '2024-04-20T18:23:43.000000Z'
+                      updated_at: '2024-04-20T18:23:43.000000Z'
                     -
                       id: 3
-                      image: 1713615184.3.jpg
+                      image: 1713637423.3.jpg
                       branch_id: 1
-                      created_at: '2024-04-20T12:13:04.000000Z'
-                      updated_at: '2024-04-20T12:13:04.000000Z'
+                      created_at: '2024-04-20T18:23:43.000000Z'
+                      updated_at: '2024-04-20T18:23:43.000000Z'
                     -
                       id: 4
-                      image: 1713615222.7.jpg
+                      image: 1713637681.7.jpg
                       branch_id: 1
-                      created_at: '2024-04-20T12:13:42.000000Z'
-                      updated_at: '2024-04-20T12:13:42.000000Z'
+                      created_at: '2024-04-20T18:28:01.000000Z'
+                      updated_at: '2024-04-20T18:28:01.000000Z'
                     -
                       id: 5
-                      image: 1713615222.8.jpg
+                      image: 1713637681.8.jpg
                       branch_id: 1
-                      created_at: '2024-04-20T12:13:42.000000Z'
-                      updated_at: '2024-04-20T12:13:42.000000Z'
-                    -
-                      id: 6
-                      image: 1713615222.9.jpg
-                      branch_id: 1
-                      created_at: '2024-04-20T12:13:42.000000Z'
-                      updated_at: '2024-04-20T12:13:42.000000Z'
+                      created_at: '2024-04-20T18:28:01.000000Z'
+                      updated_at: '2024-04-20T18:28:01.000000Z'
                 properties:
                   id:
                     type: integer
@@ -290,10 +284,10 @@ paths:
                     example: 207
                   created_at:
                     type: string
-                    example: '2024-04-20T12:13:04.000000Z'
+                    example: '2024-04-20T18:23:42.000000Z'
                   updated_at:
                     type: string
-                    example: '2024-04-20T12:13:04.000000Z'
+                    example: '2024-04-20T18:23:42.000000Z'
                   brand:
                     type: object
                     properties:
@@ -305,52 +299,46 @@ paths:
                         example: Texnomart
                       image:
                         type: string
-                        example: 1713615145.texnomart.png
+                        example: 1713636759.texnomart.png
                       created_at:
                         type: string
-                        example: '2024-04-20T12:12:25.000000Z'
+                        example: '2024-04-20T18:12:40.000000Z'
                       updated_at:
                         type: string
-                        example: '2024-04-20T12:12:25.000000Z'
+                        example: '2024-04-20T18:12:40.000000Z'
                   images:
                     type: array
                     example:
                       -
                         id: 1
-                        image: 1713615184.1.jpg
+                        image: 1713637423.1.jpg
                         branch_id: 1
-                        created_at: '2024-04-20T12:13:04.000000Z'
-                        updated_at: '2024-04-20T12:13:04.000000Z'
+                        created_at: '2024-04-20T18:23:43.000000Z'
+                        updated_at: '2024-04-20T18:23:43.000000Z'
                       -
                         id: 2
-                        image: 1713615184.2.jpg
+                        image: 1713637423.2.jpg
                         branch_id: 1
-                        created_at: '2024-04-20T12:13:04.000000Z'
-                        updated_at: '2024-04-20T12:13:04.000000Z'
+                        created_at: '2024-04-20T18:23:43.000000Z'
+                        updated_at: '2024-04-20T18:23:43.000000Z'
                       -
                         id: 3
-                        image: 1713615184.3.jpg
+                        image: 1713637423.3.jpg
                         branch_id: 1
-                        created_at: '2024-04-20T12:13:04.000000Z'
-                        updated_at: '2024-04-20T12:13:04.000000Z'
+                        created_at: '2024-04-20T18:23:43.000000Z'
+                        updated_at: '2024-04-20T18:23:43.000000Z'
                       -
                         id: 4
-                        image: 1713615222.7.jpg
+                        image: 1713637681.7.jpg
                         branch_id: 1
-                        created_at: '2024-04-20T12:13:42.000000Z'
-                        updated_at: '2024-04-20T12:13:42.000000Z'
+                        created_at: '2024-04-20T18:28:01.000000Z'
+                        updated_at: '2024-04-20T18:28:01.000000Z'
                       -
                         id: 5
-                        image: 1713615222.8.jpg
+                        image: 1713637681.8.jpg
                         branch_id: 1
-                        created_at: '2024-04-20T12:13:42.000000Z'
-                        updated_at: '2024-04-20T12:13:42.000000Z'
-                      -
-                        id: 6
-                        image: 1713615222.9.jpg
-                        branch_id: 1
-                        created_at: '2024-04-20T12:13:42.000000Z'
-                        updated_at: '2024-04-20T12:13:42.000000Z'
+                        created_at: '2024-04-20T18:28:01.000000Z'
+                        updated_at: '2024-04-20T18:28:01.000000Z'
                     items:
                       type: object
                       properties:
@@ -359,16 +347,16 @@ paths:
                           example: 1
                         image:
                           type: string
-                          example: 1713615184.1.jpg
+                          example: 1713637423.1.jpg
                         branch_id:
                           type: integer
                           example: 1
                         created_at:
                           type: string
-                          example: '2024-04-20T12:13:04.000000Z'
+                          example: '2024-04-20T18:23:43.000000Z'
                         updated_at:
                           type: string
-                          example: '2024-04-20T12:13:04.000000Z'
+                          example: '2024-04-20T18:23:43.000000Z'
       tags:
         - Branch
       security: []
@@ -390,15 +378,15 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: explicabo
+                  example: nemo
                 brand_id:
                   type: string
                   description: ''
-                  example: perspiciatis
+                  example: sed
                 region_id:
                   type: string
                   description: ''
-                  example: rem
+                  example: iusto
                 district_id:
                   type: string
                   description: ''
@@ -451,9 +439,15 @@ paths:
                     -
                       id: 1
                       name: Texnomart
-                      image: 1713615145.texnomart.png
-                      created_at: '2024-04-20T12:12:25.000000Z'
-                      updated_at: '2024-04-20T12:12:25.000000Z'
+                      image: 1713636759.texnomart.png
+                      created_at: '2024-04-20T18:12:40.000000Z'
+                      updated_at: '2024-04-20T18:12:40.000000Z'
+                    -
+                      id: 3
+                      name: Ishonch
+                      image: 1713637097.ishonch.jpg
+                      created_at: '2024-04-20T18:18:17.000000Z'
+                      updated_at: '2024-04-20T18:20:40.000000Z'
                 properties:
                   data:
                     type: array
@@ -461,9 +455,15 @@ paths:
                       -
                         id: 1
                         name: Texnomart
-                        image: 1713615145.texnomart.png
-                        created_at: '2024-04-20T12:12:25.000000Z'
-                        updated_at: '2024-04-20T12:12:25.000000Z'
+                        image: 1713636759.texnomart.png
+                        created_at: '2024-04-20T18:12:40.000000Z'
+                        updated_at: '2024-04-20T18:12:40.000000Z'
+                      -
+                        id: 3
+                        name: Ishonch
+                        image: 1713637097.ishonch.jpg
+                        created_at: '2024-04-20T18:18:17.000000Z'
+                        updated_at: '2024-04-20T18:20:40.000000Z'
                     items:
                       type: object
                       properties:
@@ -475,13 +475,13 @@ paths:
                           example: Texnomart
                         image:
                           type: string
-                          example: 1713615145.texnomart.png
+                          example: 1713636759.texnomart.png
                         created_at:
                           type: string
-                          example: '2024-04-20T12:12:25.000000Z'
+                          example: '2024-04-20T18:12:40.000000Z'
                         updated_at:
                           type: string
-                          example: '2024-04-20T12:12:25.000000Z'
+                          example: '2024-04-20T18:12:40.000000Z'
       tags:
         - Brand
       security: []
@@ -503,7 +503,7 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: nqdihnkysmrzh
+                  example: eauskjllgkwmbynnnx
                 image:
                   type: string
                   format: binary
@@ -528,9 +528,9 @@ paths:
                   data:
                     id: 1
                     name: Texnomart
-                    image: 1713615145.texnomart.png
-                    created_at: '2024-04-20T12:12:25.000000Z'
-                    updated_at: '2024-04-20T12:12:25.000000Z'
+                    image: 1713636759.texnomart.png
+                    created_at: '2024-04-20T18:12:40.000000Z'
+                    updated_at: '2024-04-20T18:12:40.000000Z'
                 properties:
                   data:
                     type: object
@@ -543,13 +543,13 @@ paths:
                         example: Texnomart
                       image:
                         type: string
-                        example: 1713615145.texnomart.png
+                        example: 1713636759.texnomart.png
                       created_at:
                         type: string
-                        example: '2024-04-20T12:12:25.000000Z'
+                        example: '2024-04-20T18:12:40.000000Z'
                       updated_at:
                         type: string
-                        example: '2024-04-20T12:12:25.000000Z'
+                        example: '2024-04-20T18:12:40.000000Z'
       tags:
         - Brand
       security: []
@@ -571,7 +571,7 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: tvlwqkg
+                  example: xhvvu
                 image:
                   type: string
                   format: binary
@@ -643,7 +643,7 @@ paths:
         in: path
         name: regionId
         description: ''
-        example: debitis
+        example: officia
         required: true
         schema:
           type: string
@@ -1580,10 +1580,10 @@ paths:
                       id: 1
                       full_name: 'Rahmonov Otabek'
                       phone_number: '+998998624122'
-                      created_at: '2024-04-20T15:37:10.000000Z'
-                      updated_at: '2024-04-20T16:57:15.000000Z'
-                      is_active: 0
-                      last_login: '2024-04-10 15:51:42'
+                      created_at: '2024-04-20T18:07:38.000000Z'
+                      updated_at: '2024-04-20T18:08:29.000000Z'
+                      is_active: 1
+                      last_login: '2024-04-20 18:08:29'
                 properties:
                   data:
                     type: array
@@ -1592,10 +1592,10 @@ paths:
                         id: 1
                         full_name: 'Rahmonov Otabek'
                         phone_number: '+998998624122'
-                        created_at: '2024-04-20T15:37:10.000000Z'
-                        updated_at: '2024-04-20T16:57:15.000000Z'
-                        is_active: 0
-                        last_login: '2024-04-10 15:51:42'
+                        created_at: '2024-04-20T18:07:38.000000Z'
+                        updated_at: '2024-04-20T18:08:29.000000Z'
+                        is_active: 1
+                        last_login: '2024-04-20 18:08:29'
                     items:
                       type: object
                       properties:
@@ -1610,16 +1610,16 @@ paths:
                           example: '+998998624122'
                         created_at:
                           type: string
-                          example: '2024-04-20T15:37:10.000000Z'
+                          example: '2024-04-20T18:07:38.000000Z'
                         updated_at:
                           type: string
-                          example: '2024-04-20T16:57:15.000000Z'
+                          example: '2024-04-20T18:08:29.000000Z'
                         is_active:
                           type: integer
-                          example: 0
+                          example: 1
                         last_login:
                           type: string
-                          example: '2024-04-10 15:51:42'
+                          example: '2024-04-20 18:08:29'
       tags:
         - User
       security: []
@@ -1641,15 +1641,15 @@ paths:
                 full_name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ffzoaggvvnlnaoflhvpqcmdx
+                  example: iqjjnrfgzibvxytdcbhul
                 phone_number:
                   type: string
                   description: 'Must not be greater than 13 characters.'
-                  example: sziyfn
+                  example: rskmqyp
                 password:
                   type: string
                   description: 'Must be at least 6 characters.'
-                  example: '{G)}awn#%{zI-:vW?U1'
+                  example: '\N*XtN+qR-t:s&F6Ej'
               required:
                 - full_name
                 - phone_number
@@ -1673,10 +1673,10 @@ paths:
                     id: 1
                     full_name: 'Rahmonov Otabek'
                     phone_number: '+998998624122'
-                    created_at: '2024-04-20T15:37:10.000000Z'
-                    updated_at: '2024-04-20T16:57:15.000000Z'
-                    is_active: 0
-                    last_login: '2024-04-10 15:51:42'
+                    created_at: '2024-04-20T18:07:38.000000Z'
+                    updated_at: '2024-04-20T18:08:29.000000Z'
+                    is_active: 1
+                    last_login: '2024-04-20 18:08:29'
                 properties:
                   data:
                     type: object
@@ -1692,16 +1692,16 @@ paths:
                         example: '+998998624122'
                       created_at:
                         type: string
-                        example: '2024-04-20T15:37:10.000000Z'
+                        example: '2024-04-20T18:07:38.000000Z'
                       updated_at:
                         type: string
-                        example: '2024-04-20T16:57:15.000000Z'
+                        example: '2024-04-20T18:08:29.000000Z'
                       is_active:
                         type: integer
-                        example: 0
+                        example: 1
                       last_login:
                         type: string
-                        example: '2024-04-10 15:51:42'
+                        example: '2024-04-20 18:08:29'
       tags:
         - User
       security: []
@@ -1723,15 +1723,15 @@ paths:
                 full_name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ffhureu
+                  example: wxzfmcdwv
                 phone_number:
                   type: string
                   description: 'Must not be greater than 13 characters.'
-                  example: oizejdujcbt
+                  example: ukmaalve
                 password:
                   type: string
                   description: 'Must be at least 6 characters.'
-                  example: ';|7]kiu'
+                  example: '{P_M?I17prk(eDH",k'
               required:
                 - full_name
                 - phone_number

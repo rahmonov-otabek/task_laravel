@@ -29,7 +29,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":1,"name":"1-filial","brand":{"id":1,"name":"Texnomart","image":"1713615145.texnomart.png","created_at":"2024-04-20T12:12:25.000000Z","updated_at":"2024-04-20T12:12:25.000000Z"},"region_id":14,"district_id":207,"created_at":"2024-04-20T12:13:04.000000Z","updated_at":"2024-04-20T12:13:04.000000Z"}]}'
+        content: '{"data":[{"id":1,"name":"1-filial","brand":{"id":1,"name":"Texnomart","image":"1713636759.texnomart.png","created_at":"2024-04-20T18:12:40.000000Z","updated_at":"2024-04-20T18:12:40.000000Z"},"region_id":14,"district_id":207,"created_at":"2024-04-20T18:23:42.000000Z","updated_at":"2024-04-20T18:23:42.000000Z"}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -69,7 +69,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: quia
+        example: omnis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -78,7 +78,7 @@ endpoints:
         name: brand_id
         description: ''
         required: true
-        example: sed
+        example: et
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -87,7 +87,7 @@ endpoints:
         name: region_id
         description: ''
         required: true
-        example: vel
+        example: occaecati
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -96,7 +96,7 @@ endpoints:
         name: district_id
         description: ''
         required: true
-        example: veritatis
+        example: quasi
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -112,10 +112,10 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: quia
-      brand_id: sed
-      region_id: vel
-      district_id: veritatis
+      name: omnis
+      brand_id: et
+      region_id: occaecati
+      district_id: quasi
     fileParameters:
       images:
         - null
@@ -162,7 +162,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"id":1,"name":"1-filial","brand_id":1,"region_id":14,"district_id":207,"created_at":"2024-04-20T12:13:04.000000Z","updated_at":"2024-04-20T12:13:04.000000Z","brand":{"id":1,"name":"Texnomart","image":"1713615145.texnomart.png","created_at":"2024-04-20T12:12:25.000000Z","updated_at":"2024-04-20T12:12:25.000000Z"},"images":[{"id":1,"image":"1713615184.1.jpg","branch_id":1,"created_at":"2024-04-20T12:13:04.000000Z","updated_at":"2024-04-20T12:13:04.000000Z"},{"id":2,"image":"1713615184.2.jpg","branch_id":1,"created_at":"2024-04-20T12:13:04.000000Z","updated_at":"2024-04-20T12:13:04.000000Z"},{"id":3,"image":"1713615184.3.jpg","branch_id":1,"created_at":"2024-04-20T12:13:04.000000Z","updated_at":"2024-04-20T12:13:04.000000Z"},{"id":4,"image":"1713615222.7.jpg","branch_id":1,"created_at":"2024-04-20T12:13:42.000000Z","updated_at":"2024-04-20T12:13:42.000000Z"},{"id":5,"image":"1713615222.8.jpg","branch_id":1,"created_at":"2024-04-20T12:13:42.000000Z","updated_at":"2024-04-20T12:13:42.000000Z"},{"id":6,"image":"1713615222.9.jpg","branch_id":1,"created_at":"2024-04-20T12:13:42.000000Z","updated_at":"2024-04-20T12:13:42.000000Z"}]}'
+        content: '{"id":1,"name":"1-filial","brand_id":1,"region_id":14,"district_id":207,"created_at":"2024-04-20T18:23:42.000000Z","updated_at":"2024-04-20T18:23:42.000000Z","brand":{"id":1,"name":"Texnomart","image":"1713636759.texnomart.png","created_at":"2024-04-20T18:12:40.000000Z","updated_at":"2024-04-20T18:12:40.000000Z"},"images":[{"id":1,"image":"1713637423.1.jpg","branch_id":1,"created_at":"2024-04-20T18:23:43.000000Z","updated_at":"2024-04-20T18:23:43.000000Z"},{"id":2,"image":"1713637423.2.jpg","branch_id":1,"created_at":"2024-04-20T18:23:43.000000Z","updated_at":"2024-04-20T18:23:43.000000Z"},{"id":3,"image":"1713637423.3.jpg","branch_id":1,"created_at":"2024-04-20T18:23:43.000000Z","updated_at":"2024-04-20T18:23:43.000000Z"},{"id":4,"image":"1713637681.7.jpg","branch_id":1,"created_at":"2024-04-20T18:28:01.000000Z","updated_at":"2024-04-20T18:28:01.000000Z"},{"id":5,"image":"1713637681.8.jpg","branch_id":1,"created_at":"2024-04-20T18:28:01.000000Z","updated_at":"2024-04-20T18:28:01.000000Z"}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -213,7 +213,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: explicabo
+        example: nemo
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -222,7 +222,7 @@ endpoints:
         name: brand_id
         description: ''
         required: true
-        example: perspiciatis
+        example: sed
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -231,7 +231,7 @@ endpoints:
         name: region_id
         description: ''
         required: true
-        example: rem
+        example: iusto
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -256,9 +256,9 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: explicabo
-      brand_id: perspiciatis
-      region_id: rem
+      name: nemo
+      brand_id: sed
+      region_id: iusto
       district_id: dolorem
     fileParameters:
       images:

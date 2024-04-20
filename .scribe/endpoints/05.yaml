@@ -22,13 +22,13 @@ endpoints:
         name: regionId
         description: ''
         required: true
-        example: debitis
+        example: officia
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      regionId: debitis
+      regionId: officia
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

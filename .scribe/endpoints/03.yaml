@@ -27,7 +27,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":1,"name":"Texnomart","image":"1713615145.texnomart.png","created_at":"2024-04-20T12:12:25.000000Z","updated_at":"2024-04-20T12:12:25.000000Z"}]}'
+        content: '{"data":[{"id":1,"name":"Texnomart","image":"1713636759.texnomart.png","created_at":"2024-04-20T18:12:40.000000Z","updated_at":"2024-04-20T18:12:40.000000Z"},{"id":3,"name":"Ishonch","image":"1713637097.ishonch.jpg","created_at":"2024-04-20T18:18:17.000000Z","updated_at":"2024-04-20T18:20:40.000000Z"}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -67,7 +67,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: nqdihnkysmrzh
+        example: eauskjllgkwmbynnnx
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -82,7 +82,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: nqdihnkysmrzh
+      name: eauskjllgkwmbynnnx
     fileParameters:
       image: null
     responses: []
@@ -128,7 +128,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"id":1,"name":"Texnomart","image":"1713615145.texnomart.png","created_at":"2024-04-20T12:12:25.000000Z","updated_at":"2024-04-20T12:12:25.000000Z"}}'
+        content: '{"data":{"id":1,"name":"Texnomart","image":"1713636759.texnomart.png","created_at":"2024-04-20T18:12:40.000000Z","updated_at":"2024-04-20T18:12:40.000000Z"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -179,7 +179,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: tvlwqkg
+        example: xhvvu
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -194,7 +194,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: tvlwqkg
+      name: xhvvu
     fileParameters:
       image: null
     responses: []

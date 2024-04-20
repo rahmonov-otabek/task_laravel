@@ -28,7 +28,7 @@ endpoints:
         name: full_name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: ysymjm
+        example: xosswjegj
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -37,7 +37,7 @@ endpoints:
         name: phone_number
         description: 'Must not be greater than 13 characters.'
         required: true
-        example: dhsahye
+        example: ikaelwnb
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -46,15 +46,15 @@ endpoints:
         name: password
         description: 'Must be at least 6 characters.'
         required: true
-        example: iLQCC;.S`w4
+        example: IU(kKe|xNf<Hj^ve
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      full_name: ysymjm
-      phone_number: dhsahye
-      password: iLQCC;.S`w4
+      full_name: xosswjegj
+      phone_number: ikaelwnb
+      password: IU(kKe|xNf<Hj^ve
     fileParameters: []
     responses: []
     responseFields: []
@@ -88,7 +88,7 @@ endpoints:
         name: phone_number
         description: ''
         required: true
-        example: voluptatem
+        example: perferendis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -97,14 +97,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: quos
+        example: quaerat
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      phone_number: voluptatem
-      password: quos
+      phone_number: perferendis
+      password: quaerat
     fileParameters: []
     responses: []
     responseFields: []
