@@ -9,6 +9,10 @@ use App\Models\District;
 use App\Models\Currency;
 use Spatie\QueryBuilder\QueryBuilder;
 
+/**
+ * @group Main
+ * 
+ */
 class MainController extends Controller
 {
     public function regionsList(Request $request)

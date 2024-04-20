@@ -12,6 +12,10 @@ use File;
 
 use App\Helpers\UploadHelper;
 
+/**
+ * @group Brand
+ * 
+ */
 class BrandController extends Controller
 {
     /**

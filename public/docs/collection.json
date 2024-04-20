@@ -1,0 +1,1200 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "fa24f61c-bae3-43d0-9888-ee204a8864e9",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Auth",
+            "description": "",
+            "item": [
+                {
+                    "name": "POST api\/register",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/register",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/register"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"full_name\":\"ysymjm\",\"phone_number\":\"dhsahye\",\"password\":\"iLQCC;.S`w4\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/login",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"phone_number\":\"voluptatem\",\"password\":\"quos\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/logout",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/logout",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/logout"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Branch",
+            "description": "",
+            "item": [
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/branches",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/branches"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "55"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":1,\"name\":\"1-filial\",\"brand\":{\"id\":1,\"name\":\"Texnomart\",\"image\":\"1713615145.texnomart.png\",\"created_at\":\"2024-04-20T12:12:25.000000Z\",\"updated_at\":\"2024-04-20T12:12:25.000000Z\"},\"region_id\":14,\"district_id\":207,\"created_at\":\"2024-04-20T12:13:04.000000Z\",\"updated_at\":\"2024-04-20T12:13:04.000000Z\"}]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/branches",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/branches"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "quia",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "brand_id",
+                                    "value": "sed",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "region_id",
+                                    "value": "vel",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "district_id",
+                                    "value": "veritatis",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "images[]",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/branches\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/branches\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the branch."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "54"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"id\":1,\"name\":\"1-filial\",\"brand_id\":1,\"region_id\":14,\"district_id\":207,\"created_at\":\"2024-04-20T12:13:04.000000Z\",\"updated_at\":\"2024-04-20T12:13:04.000000Z\",\"brand\":{\"id\":1,\"name\":\"Texnomart\",\"image\":\"1713615145.texnomart.png\",\"created_at\":\"2024-04-20T12:12:25.000000Z\",\"updated_at\":\"2024-04-20T12:12:25.000000Z\"},\"images\":[{\"id\":1,\"image\":\"1713615184.1.jpg\",\"branch_id\":1,\"created_at\":\"2024-04-20T12:13:04.000000Z\",\"updated_at\":\"2024-04-20T12:13:04.000000Z\"},{\"id\":2,\"image\":\"1713615184.2.jpg\",\"branch_id\":1,\"created_at\":\"2024-04-20T12:13:04.000000Z\",\"updated_at\":\"2024-04-20T12:13:04.000000Z\"},{\"id\":3,\"image\":\"1713615184.3.jpg\",\"branch_id\":1,\"created_at\":\"2024-04-20T12:13:04.000000Z\",\"updated_at\":\"2024-04-20T12:13:04.000000Z\"},{\"id\":4,\"image\":\"1713615222.7.jpg\",\"branch_id\":1,\"created_at\":\"2024-04-20T12:13:42.000000Z\",\"updated_at\":\"2024-04-20T12:13:42.000000Z\"},{\"id\":5,\"image\":\"1713615222.8.jpg\",\"branch_id\":1,\"created_at\":\"2024-04-20T12:13:42.000000Z\",\"updated_at\":\"2024-04-20T12:13:42.000000Z\"},{\"id\":6,\"image\":\"1713615222.9.jpg\",\"branch_id\":1,\"created_at\":\"2024-04-20T12:13:42.000000Z\",\"updated_at\":\"2024-04-20T12:13:42.000000Z\"}]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/branches\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/branches\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the branch."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "explicabo",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "brand_id",
+                                    "value": "perspiciatis",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "region_id",
+                                    "value": "rem",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "district_id",
+                                    "value": "dolorem",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "images[]",
+                                    "src": [],
+                                    "type": "file"
+                                },
+                                {
+                                    "key": "_method",
+                                    "value": "PUT",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/branches\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/branches\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the branch."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Brand",
+            "description": "",
+            "item": [
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/brands",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/brands"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "57"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":1,\"name\":\"Texnomart\",\"image\":\"1713615145.texnomart.png\",\"created_at\":\"2024-04-20T12:12:25.000000Z\",\"updated_at\":\"2024-04-20T12:12:25.000000Z\"}]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/brands",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/brands"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "nqdihnkysmrzh",
+                                    "type": "text",
+                                    "description": "Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "image",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/brands\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/brands\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the brand."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "56"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":{\"id\":1,\"name\":\"Texnomart\",\"image\":\"1713615145.texnomart.png\",\"created_at\":\"2024-04-20T12:12:25.000000Z\",\"updated_at\":\"2024-04-20T12:12:25.000000Z\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/brands\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/brands\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the brand."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "tvlwqkg",
+                                    "type": "text",
+                                    "description": "Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "image",
+                                    "src": [],
+                                    "type": "file"
+                                },
+                                {
+                                    "key": "_method",
+                                    "value": "PUT",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/brands\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/brands\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the brand."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Main",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/getBranchCountsByRegion\/{regionId}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/getBranchCountsByRegion\/:regionId",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/getBranchCountsByRegion\/:regionId",
+                            "variable": [
+                                {
+                                    "id": "regionId",
+                                    "key": "regionId",
+                                    "value": "debitis",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "53"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/regions",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/regions",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/regions"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "52"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[{\"id\":1,\"name\":\"Qoraqalpog\\u2018iston Respublikasi\"},{\"id\":2,\"name\":\"Andijon viloyati\"},{\"id\":3,\"name\":\"Buxoro viloyati\"},{\"id\":4,\"name\":\"Jizzax viloyati\"},{\"id\":5,\"name\":\"Qashqadaryo viloyati\"},{\"id\":6,\"name\":\"Navoiy viloyati\"},{\"id\":7,\"name\":\"Namangan viloyati\"},{\"id\":8,\"name\":\"Samarqand viloyati\"},{\"id\":9,\"name\":\"Surxandaryo viloyati\"},{\"id\":10,\"name\":\"Sirdaryo viloyati\"},{\"id\":11,\"name\":\"Toshkent viloyati\"},{\"id\":12,\"name\":\"Farg\\u2018ona viloyati\"},{\"id\":13,\"name\":\"Xorazm viloyati\"},{\"id\":14,\"name\":\"Toshkent shahri\"}]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/districts",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/districts",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/districts"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "51"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[{\"id\":15,\"name\":\"Amudaryo tumani\",\"region_id\":1},{\"id\":16,\"name\":\"Beruniy tumani\",\"region_id\":1},{\"id\":17,\"name\":\"Kegayli tumani\",\"region_id\":1},{\"id\":18,\"name\":\"Qonliko\\u2018l tumani\",\"region_id\":1},{\"id\":19,\"name\":\"Qorao\\u2018zak tumani\",\"region_id\":1},{\"id\":20,\"name\":\"Qo\\u2018ng\\u2018irot tumani\",\"region_id\":1},{\"id\":21,\"name\":\"Mo\\u2018ynoq tumani\",\"region_id\":1},{\"id\":22,\"name\":\"Nukus tumani\",\"region_id\":1},{\"id\":23,\"name\":\"Nukus shahri\",\"region_id\":1},{\"id\":24,\"name\":\"Taxtako\\u2018pir tumani\",\"region_id\":1},{\"id\":25,\"name\":\"To\\u2018rtko\\u2018l tumani\",\"region_id\":1},{\"id\":26,\"name\":\"Xo\\u2018jayli tumani\",\"region_id\":1},{\"id\":27,\"name\":\"CHimboy tumani\",\"region_id\":1},{\"id\":28,\"name\":\"SHumanay tumani\",\"region_id\":1},{\"id\":29,\"name\":\"Ellikqal\\u2018a tumani\",\"region_id\":1},{\"id\":30,\"name\":\"Andijon shahri\",\"region_id\":2},{\"id\":31,\"name\":\"Andijon tumani\",\"region_id\":2},{\"id\":32,\"name\":\"Asaka tumani\",\"region_id\":2},{\"id\":33,\"name\":\"Baliqchi tumani\",\"region_id\":2},{\"id\":34,\"name\":\"Buloqboshi tumani\",\"region_id\":2},{\"id\":35,\"name\":\"Bo\\u2018z tumani\",\"region_id\":2},{\"id\":36,\"name\":\"Jalaquduq tumani\",\"region_id\":2},{\"id\":37,\"name\":\"Izbosgan tumani\",\"region_id\":2},{\"id\":38,\"name\":\"Qorasuv shahri\",\"region_id\":2},{\"id\":39,\"name\":\"Qo\\u2018rg\\u2018ontepa tumani\",\"region_id\":2},{\"id\":40,\"name\":\"Marhamat tumani\",\"region_id\":2},{\"id\":41,\"name\":\"Oltinko\\u2018l tumani\",\"region_id\":2},{\"id\":42,\"name\":\"Paxtaobod tumani\",\"region_id\":2},{\"id\":43,\"name\":\"Ulug\\u2018nor tumani\",\"region_id\":2},{\"id\":44,\"name\":\"Xonabod tumani\",\"region_id\":2},{\"id\":45,\"name\":\"Xo\\u2018jaobod shahri\",\"region_id\":2},{\"id\":46,\"name\":\"Shaxrixon tumani\",\"region_id\":2},{\"id\":47,\"name\":\"Buxoro shahri\",\"region_id\":3},{\"id\":48,\"name\":\"Buxoro tumani\",\"region_id\":3},{\"id\":49,\"name\":\"Vobkent tumani\",\"region_id\":3},{\"id\":50,\"name\":\"G\\u2018ijduvon tumani\",\"region_id\":3},{\"id\":51,\"name\":\"Jondor tumani\",\"region_id\":3},{\"id\":52,\"name\":\"Kogon tumani\",\"region_id\":3},{\"id\":53,\"name\":\"Kogon shahri\",\"region_id\":3},{\"id\":54,\"name\":\"Qorako\\u2018l tumani\",\"region_id\":3},{\"id\":55,\"name\":\"Qorovulbozor tumani\",\"region_id\":3},{\"id\":56,\"name\":\"Olot tumani\",\"region_id\":3},{\"id\":57,\"name\":\"Peshku tumani\",\"region_id\":3},{\"id\":58,\"name\":\"Romitan tumani\",\"region_id\":3},{\"id\":59,\"name\":\"Shofirkon tumani\",\"region_id\":3},{\"id\":60,\"name\":\"Arnasoy tumani\",\"region_id\":4},{\"id\":61,\"name\":\"Baxmal tumani\",\"region_id\":4},{\"id\":62,\"name\":\"G\\u2018allaorol tumani\",\"region_id\":4},{\"id\":63,\"name\":\"Do\\u2018stlik tumani\",\"region_id\":4},{\"id\":64,\"name\":\"Sh.Rashidov tumani\",\"region_id\":4},{\"id\":65,\"name\":\"Jizzax shahri\",\"region_id\":4},{\"id\":66,\"name\":\"Zarbdor tumani\",\"region_id\":4},{\"id\":67,\"name\":\"Zafarobod tumani\",\"region_id\":4},{\"id\":68,\"name\":\"Zomin tumani\",\"region_id\":4},{\"id\":69,\"name\":\"Mirzacho\\u2018l tumani\",\"region_id\":4},{\"id\":70,\"name\":\"Paxtakor tumani\",\"region_id\":4},{\"id\":71,\"name\":\"Forish tumani\",\"region_id\":4},{\"id\":72,\"name\":\"Yangiobod tumani\",\"region_id\":4},{\"id\":73,\"name\":\"G\\u2018uzor tumani\",\"region_id\":5},{\"id\":74,\"name\":\"Dehqonobod tumani\",\"region_id\":5},{\"id\":75,\"name\":\"Qamashi tumani\",\"region_id\":5},{\"id\":76,\"name\":\"Qarshi tumani\",\"region_id\":5},{\"id\":77,\"name\":\"Qarshi shahri\",\"region_id\":5},{\"id\":78,\"name\":\"Kasbi tumani\",\"region_id\":5},{\"id\":79,\"name\":\"Kitob tumani\",\"region_id\":5},{\"id\":80,\"name\":\"Koson tumani\",\"region_id\":5},{\"id\":81,\"name\":\"Mirishkor tumani\",\"region_id\":5},{\"id\":82,\"name\":\"Muborak tumani\",\"region_id\":5},{\"id\":83,\"name\":\"Nishon tumani\",\"region_id\":5},{\"id\":84,\"name\":\"Chiroqchi tumani\",\"region_id\":5},{\"id\":85,\"name\":\"Shahrisabz tumani\",\"region_id\":5},{\"id\":86,\"name\":\"Yakkabog\\u2018 tumani\",\"region_id\":5},{\"id\":87,\"name\":\"Zarafshon shahri\",\"region_id\":6},{\"id\":88,\"name\":\"Karmana tumani\",\"region_id\":6},{\"id\":89,\"name\":\"Qiziltepa tumani\",\"region_id\":6},{\"id\":90,\"name\":\"Konimex tumani\",\"region_id\":6},{\"id\":91,\"name\":\"Navbahor tumani\",\"region_id\":6},{\"id\":92,\"name\":\"Navoiy shahri\",\"region_id\":6},{\"id\":93,\"name\":\"Nurota tumani\",\"region_id\":6},{\"id\":94,\"name\":\"Tomdi tumani\",\"region_id\":6},{\"id\":95,\"name\":\"Uchquduq tumani\",\"region_id\":6},{\"id\":96,\"name\":\"Xatirchi tumani\",\"region_id\":6},{\"id\":97,\"name\":\"Kosonsoy tumani\",\"region_id\":7},{\"id\":98,\"name\":\"Mingbuloq tumani\",\"region_id\":7},{\"id\":99,\"name\":\"Namangan tumani\",\"region_id\":7},{\"id\":100,\"name\":\"Namangan shahri\",\"region_id\":7},{\"id\":101,\"name\":\"Norin tumani\",\"region_id\":7},{\"id\":102,\"name\":\"Pop tumani\",\"region_id\":7},{\"id\":103,\"name\":\"To\\u2018raqo\\u2018rg\\u2018on tumani\",\"region_id\":7},{\"id\":104,\"name\":\"Uychi tumani\",\"region_id\":7},{\"id\":105,\"name\":\"Uchqo\\u2018rg\\u2018on tumani\",\"region_id\":7},{\"id\":106,\"name\":\"Chortoq tumani\",\"region_id\":7},{\"id\":107,\"name\":\"Chust tumani\",\"region_id\":7},{\"id\":108,\"name\":\"Yangiqo\\u2018rg\\u2018on tumani\",\"region_id\":7},{\"id\":109,\"name\":\"Bulung\\u2018ur tumani\",\"region_id\":8},{\"id\":110,\"name\":\"Jomboy tumani\",\"region_id\":8},{\"id\":111,\"name\":\"Ishtixon tumani\",\"region_id\":8},{\"id\":112,\"name\":\"Kattaqo\\u2018rg\\u2018on tumani\",\"region_id\":8},{\"id\":113,\"name\":\"Kattaqo\\u2018rg\\u2018on shahri\",\"region_id\":8},{\"id\":114,\"name\":\"Qo\\u2018shrabot tumani\",\"region_id\":8},{\"id\":115,\"name\":\"Narpay tumani\",\"region_id\":8},{\"id\":116,\"name\":\"Nurabod tumani\",\"region_id\":8},{\"id\":117,\"name\":\"Oqdaryo tumani\",\"region_id\":8},{\"id\":118,\"name\":\"Payariq tumani\",\"region_id\":8},{\"id\":119,\"name\":\"Pastarg\\u2018om tumani\",\"region_id\":8},{\"id\":120,\"name\":\"Paxtachi tumani\",\"region_id\":8},{\"id\":121,\"name\":\"Samarqand tumani\",\"region_id\":8},{\"id\":122,\"name\":\"Samarqand shahri\",\"region_id\":8},{\"id\":123,\"name\":\"Toyloq tumani\",\"region_id\":8},{\"id\":124,\"name\":\"Urgut tumani\",\"region_id\":8},{\"id\":125,\"name\":\"Angor tumani\",\"region_id\":9},{\"id\":126,\"name\":\"Boysun tumani\",\"region_id\":9},{\"id\":127,\"name\":\"Denov tumani\",\"region_id\":9},{\"id\":128,\"name\":\"Jarqo\\u2018rg\\u2018on tumani\",\"region_id\":9},{\"id\":129,\"name\":\"Qiziriq tumani\",\"region_id\":9},{\"id\":130,\"name\":\"Qo\\u2018mqo\\u2018rg\\u2018on tumani\",\"region_id\":9},{\"id\":131,\"name\":\"Muzrabot tumani\",\"region_id\":9},{\"id\":132,\"name\":\"Oltinsoy tumani\",\"region_id\":9},{\"id\":133,\"name\":\"Sariosiy tumani\",\"region_id\":9},{\"id\":134,\"name\":\"Termiz tumani\",\"region_id\":9},{\"id\":135,\"name\":\"Termiz shahri\",\"region_id\":9},{\"id\":136,\"name\":\"Uzun tumani\",\"region_id\":9},{\"id\":137,\"name\":\"Sherobod tumani\",\"region_id\":9},{\"id\":138,\"name\":\"Sho\\u2018rchi tumani\",\"region_id\":9},{\"id\":139,\"name\":\"Boyovut tumani\",\"region_id\":10},{\"id\":140,\"name\":\"Guliston tumani\",\"region_id\":10},{\"id\":141,\"name\":\"Guliston shahri\",\"region_id\":10},{\"id\":142,\"name\":\"Mirzaobod tumani\",\"region_id\":10},{\"id\":143,\"name\":\"Oqoltin tumani\",\"region_id\":10},{\"id\":144,\"name\":\"Sayxunobod tumani\",\"region_id\":10},{\"id\":145,\"name\":\"Sardoba tumani\",\"region_id\":10},{\"id\":146,\"name\":\"Sirdaryo tumani\",\"region_id\":10},{\"id\":147,\"name\":\"Xavos tumani\",\"region_id\":10},{\"id\":148,\"name\":\"Shirin shahri\",\"region_id\":10},{\"id\":149,\"name\":\"Yangier shahri\",\"region_id\":10},{\"id\":150,\"name\":\"Angiren shahri\",\"region_id\":11},{\"id\":151,\"name\":\"Bekabod tumani\",\"region_id\":11},{\"id\":152,\"name\":\"Bekabod shahri\",\"region_id\":11},{\"id\":153,\"name\":\"Bo\\u2018ka tumani\",\"region_id\":11},{\"id\":154,\"name\":\"Bo\\u2018stonliq tumani\",\"region_id\":11},{\"id\":155,\"name\":\"Zangiota tumani\",\"region_id\":11},{\"id\":156,\"name\":\"Qibray tumani\",\"region_id\":11},{\"id\":157,\"name\":\"Quyichirchiq tumani\",\"region_id\":11},{\"id\":158,\"name\":\"Oqqo\\u2018rg\\u2018on tumani\",\"region_id\":11},{\"id\":159,\"name\":\"Olmaliq shahri\",\"region_id\":11},{\"id\":160,\"name\":\"Ohangaron tumani\",\"region_id\":11},{\"id\":161,\"name\":\"Parkent tumani\",\"region_id\":11},{\"id\":162,\"name\":\"Piskent tumani\",\"region_id\":11},{\"id\":163,\"name\":\"O\\u2018rtachirchiq tumani\",\"region_id\":11},{\"id\":164,\"name\":\"Chinoz tumani\",\"region_id\":11},{\"id\":165,\"name\":\"Chirchiq shahri\",\"region_id\":11},{\"id\":166,\"name\":\"Yuqorichirchiq tumani\",\"region_id\":11},{\"id\":167,\"name\":\"Yangiyo\\u2018l tumani\",\"region_id\":11},{\"id\":168,\"name\":\"Beshariq tumani\",\"region_id\":12},{\"id\":169,\"name\":\"Bog\\u2018dod tumani\",\"region_id\":12},{\"id\":170,\"name\":\"Buvayda tumani\",\"region_id\":12},{\"id\":171,\"name\":\"Dang\\u2018ara tumani\",\"region_id\":12},{\"id\":172,\"name\":\"Yozyovon tumani\",\"region_id\":12},{\"id\":173,\"name\":\"Quva tumani\",\"region_id\":12},{\"id\":174,\"name\":\"Quvasoy shahri\",\"region_id\":12},{\"id\":175,\"name\":\"Qo\\u2018qon shahri\",\"region_id\":12},{\"id\":176,\"name\":\"Qo\\u2018shtepa tumani\",\"region_id\":12},{\"id\":177,\"name\":\"Marg\\u2018ilon shahri\",\"region_id\":12},{\"id\":178,\"name\":\"Oltiariq tumani\",\"region_id\":12},{\"id\":179,\"name\":\"Rishton tumani\",\"region_id\":12},{\"id\":180,\"name\":\"So\\u2018x tumani\",\"region_id\":12},{\"id\":181,\"name\":\"Toshloq tumani\",\"region_id\":12},{\"id\":182,\"name\":\"Uchko\\u2018prik tumani\",\"region_id\":12},{\"id\":183,\"name\":\"O\\u2018zbekiston tumani\",\"region_id\":12},{\"id\":184,\"name\":\"Farg\\u2018ona tumani\",\"region_id\":12},{\"id\":185,\"name\":\"Farg\\u2018ona shahri\",\"region_id\":12},{\"id\":186,\"name\":\"Furqat tumani\",\"region_id\":12},{\"id\":187,\"name\":\"Bog\\u2018ot tumani\",\"region_id\":13},{\"id\":188,\"name\":\"Gurlan tumani\",\"region_id\":13},{\"id\":189,\"name\":\"Qo\\u2018shko\\u2018pir tumani\",\"region_id\":13},{\"id\":190,\"name\":\"Urganch tumani\",\"region_id\":13},{\"id\":191,\"name\":\"Urganch shahri\",\"region_id\":13},{\"id\":192,\"name\":\"Xiva tumani\",\"region_id\":13},{\"id\":193,\"name\":\"Xazarasp tumani\",\"region_id\":13},{\"id\":194,\"name\":\"Xonqa tumani\",\"region_id\":13},{\"id\":195,\"name\":\"Shavot tumani\",\"region_id\":13},{\"id\":196,\"name\":\"Yangiariq tumani\",\"region_id\":13},{\"id\":197,\"name\":\"Yangibozor tumani\",\"region_id\":13},{\"id\":198,\"name\":\"Bektimer tumani\",\"region_id\":14},{\"id\":199,\"name\":\"M.Ulug\\u2018bek tumani\",\"region_id\":14},{\"id\":200,\"name\":\"Mirobod tumani\",\"region_id\":14},{\"id\":201,\"name\":\"Olmazor tumani\",\"region_id\":14},{\"id\":202,\"name\":\"Sergeli tumani\",\"region_id\":14},{\"id\":203,\"name\":\"Uchtepa tumani\",\"region_id\":14},{\"id\":204,\"name\":\"Yashnobod tumani\",\"region_id\":14},{\"id\":205,\"name\":\"Chilonzor tumani\",\"region_id\":14},{\"id\":206,\"name\":\"Shayxontohur tumani\",\"region_id\":14},{\"id\":207,\"name\":\"Yunusobod tumani\",\"region_id\":14},{\"id\":208,\"name\":\"Yakkasaroy tumani\",\"region_id\":14},{\"id\":209,\"name\":\"Taxiatosh shahri\",\"region_id\":1},{\"id\":210,\"name\":\"Asaka shahri\",\"region_id\":2},{\"id\":211,\"name\":\"Bandixon tumani\",\"region_id\":9},{\"id\":212,\"name\":\"Ohangaron shahri\",\"region_id\":11},{\"id\":213,\"name\":\"Yangiyo\\u2018l shahri\",\"region_id\":11},{\"id\":215,\"name\":\"Toshkent tumani\",\"region_id\":11},{\"id\":216,\"name\":\"Bo'zatov tumani\",\"region_id\":1},{\"id\":217,\"name\":\"Tuproqqala tumani\",\"region_id\":13},{\"id\":218,\"name\":\"Ko'kdala tumani\",\"region_id\":5}]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/currencies",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/currencies",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/currencies"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "50"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"success\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "User",
+            "description": "",
+            "item": [
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":1,\"full_name\":\"Rahmonov Otabek\",\"phone_number\":\"+998998624122\",\"created_at\":\"2024-04-20T15:37:10.000000Z\",\"updated_at\":\"2024-04-20T16:57:15.000000Z\",\"is_active\":0,\"last_login\":\"2024-04-10 15:51:42\"}]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"full_name\":\"ffzoaggvvnlnaoflhvpqcmdx\",\"phone_number\":\"sziyfn\",\"password\":\"{G)}awn#%{zI-:vW?U1\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "58"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":{\"id\":1,\"full_name\":\"Rahmonov Otabek\",\"phone_number\":\"+998998624122\",\"created_at\":\"2024-04-20T15:37:10.000000Z\",\"updated_at\":\"2024-04-20T16:57:15.000000Z\",\"is_active\":0,\"last_login\":\"2024-04-10 15:51:42\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"full_name\":\"ffhureu\",\"phone_number\":\"oizejdujcbt\",\"password\":\";|7]kiu\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

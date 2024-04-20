@@ -10,6 +10,10 @@ use App\Http\Resources\UserCollection;
 
 use App\Models\User;
 
+/**
+ * @group User
+ * 
+ */
 class UsersController extends Controller
 {
     /**

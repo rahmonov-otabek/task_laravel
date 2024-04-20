@@ -1,0 +1,1776 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/register:
+    post:
+      summary: ''
+      operationId: postApiRegister
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Auth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                full_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ysymjm
+                phone_number:
+                  type: string
+                  description: 'Must not be greater than 13 characters.'
+                  example: dhsahye
+                password:
+                  type: string
+                  description: 'Must be at least 6 characters.'
+                  example: iLQCC;.S`w4
+              required:
+                - full_name
+                - phone_number
+                - password
+      security: []
+  /api/login:
+    post:
+      summary: ''
+      operationId: postApiLogin
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Auth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                phone_number:
+                  type: string
+                  description: ''
+                  example: voluptatem
+                password:
+                  type: string
+                  description: ''
+                  example: quos
+              required:
+                - phone_number
+                - password
+      security: []
+  /api/logout:
+    post:
+      summary: ''
+      operationId: postApiLogout
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Auth
+      security: []
+  /api/branches:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 1
+                      name: 1-filial
+                      brand:
+                        id: 1
+                        name: Texnomart
+                        image: 1713615145.texnomart.png
+                        created_at: '2024-04-20T12:12:25.000000Z'
+                        updated_at: '2024-04-20T12:12:25.000000Z'
+                      region_id: 14
+                      district_id: 207
+                      created_at: '2024-04-20T12:13:04.000000Z'
+                      updated_at: '2024-04-20T12:13:04.000000Z'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        name: 1-filial
+                        brand:
+                          id: 1
+                          name: Texnomart
+                          image: 1713615145.texnomart.png
+                          created_at: '2024-04-20T12:12:25.000000Z'
+                          updated_at: '2024-04-20T12:12:25.000000Z'
+                        region_id: 14
+                        district_id: 207
+                        created_at: '2024-04-20T12:13:04.000000Z'
+                        updated_at: '2024-04-20T12:13:04.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        name:
+                          type: string
+                          example: 1-filial
+                        brand:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 1
+                            name:
+                              type: string
+                              example: Texnomart
+                            image:
+                              type: string
+                              example: 1713615145.texnomart.png
+                            created_at:
+                              type: string
+                              example: '2024-04-20T12:12:25.000000Z'
+                            updated_at:
+                              type: string
+                              example: '2024-04-20T12:12:25.000000Z'
+                        region_id:
+                          type: integer
+                          example: 14
+                        district_id:
+                          type: integer
+                          example: 207
+                        created_at:
+                          type: string
+                          example: '2024-04-20T12:13:04.000000Z'
+                        updated_at:
+                          type: string
+                          example: '2024-04-20T12:13:04.000000Z'
+      tags:
+        - Branch
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Branch
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: quia
+                brand_id:
+                  type: string
+                  description: ''
+                  example: sed
+                region_id:
+                  type: string
+                  description: ''
+                  example: vel
+                district_id:
+                  type: string
+                  description: ''
+                  example: veritatis
+                images:
+                  type: array
+                  description: 'Must be an image.'
+                  items:
+                    type: string
+                    format: binary
+              required:
+                - name
+                - brand_id
+                - region_id
+                - district_id
+      security: []
+  '/api/branches/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  id: 1
+                  name: 1-filial
+                  brand_id: 1
+                  region_id: 14
+                  district_id: 207
+                  created_at: '2024-04-20T12:13:04.000000Z'
+                  updated_at: '2024-04-20T12:13:04.000000Z'
+                  brand:
+                    id: 1
+                    name: Texnomart
+                    image: 1713615145.texnomart.png
+                    created_at: '2024-04-20T12:12:25.000000Z'
+                    updated_at: '2024-04-20T12:12:25.000000Z'
+                  images:
+                    -
+                      id: 1
+                      image: 1713615184.1.jpg
+                      branch_id: 1
+                      created_at: '2024-04-20T12:13:04.000000Z'
+                      updated_at: '2024-04-20T12:13:04.000000Z'
+                    -
+                      id: 2
+                      image: 1713615184.2.jpg
+                      branch_id: 1
+                      created_at: '2024-04-20T12:13:04.000000Z'
+                      updated_at: '2024-04-20T12:13:04.000000Z'
+                    -
+                      id: 3
+                      image: 1713615184.3.jpg
+                      branch_id: 1
+                      created_at: '2024-04-20T12:13:04.000000Z'
+                      updated_at: '2024-04-20T12:13:04.000000Z'
+                    -
+                      id: 4
+                      image: 1713615222.7.jpg
+                      branch_id: 1
+                      created_at: '2024-04-20T12:13:42.000000Z'
+                      updated_at: '2024-04-20T12:13:42.000000Z'
+                    -
+                      id: 5
+                      image: 1713615222.8.jpg
+                      branch_id: 1
+                      created_at: '2024-04-20T12:13:42.000000Z'
+                      updated_at: '2024-04-20T12:13:42.000000Z'
+                    -
+                      id: 6
+                      image: 1713615222.9.jpg
+                      branch_id: 1
+                      created_at: '2024-04-20T12:13:42.000000Z'
+                      updated_at: '2024-04-20T12:13:42.000000Z'
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  name:
+                    type: string
+                    example: 1-filial
+                  brand_id:
+                    type: integer
+                    example: 1
+                  region_id:
+                    type: integer
+                    example: 14
+                  district_id:
+                    type: integer
+                    example: 207
+                  created_at:
+                    type: string
+                    example: '2024-04-20T12:13:04.000000Z'
+                  updated_at:
+                    type: string
+                    example: '2024-04-20T12:13:04.000000Z'
+                  brand:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      name:
+                        type: string
+                        example: Texnomart
+                      image:
+                        type: string
+                        example: 1713615145.texnomart.png
+                      created_at:
+                        type: string
+                        example: '2024-04-20T12:12:25.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2024-04-20T12:12:25.000000Z'
+                  images:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        image: 1713615184.1.jpg
+                        branch_id: 1
+                        created_at: '2024-04-20T12:13:04.000000Z'
+                        updated_at: '2024-04-20T12:13:04.000000Z'
+                      -
+                        id: 2
+                        image: 1713615184.2.jpg
+                        branch_id: 1
+                        created_at: '2024-04-20T12:13:04.000000Z'
+                        updated_at: '2024-04-20T12:13:04.000000Z'
+                      -
+                        id: 3
+                        image: 1713615184.3.jpg
+                        branch_id: 1
+                        created_at: '2024-04-20T12:13:04.000000Z'
+                        updated_at: '2024-04-20T12:13:04.000000Z'
+                      -
+                        id: 4
+                        image: 1713615222.7.jpg
+                        branch_id: 1
+                        created_at: '2024-04-20T12:13:42.000000Z'
+                        updated_at: '2024-04-20T12:13:42.000000Z'
+                      -
+                        id: 5
+                        image: 1713615222.8.jpg
+                        branch_id: 1
+                        created_at: '2024-04-20T12:13:42.000000Z'
+                        updated_at: '2024-04-20T12:13:42.000000Z'
+                      -
+                        id: 6
+                        image: 1713615222.9.jpg
+                        branch_id: 1
+                        created_at: '2024-04-20T12:13:42.000000Z'
+                        updated_at: '2024-04-20T12:13:42.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        image:
+                          type: string
+                          example: 1713615184.1.jpg
+                        branch_id:
+                          type: integer
+                          example: 1
+                        created_at:
+                          type: string
+                          example: '2024-04-20T12:13:04.000000Z'
+                        updated_at:
+                          type: string
+                          example: '2024-04-20T12:13:04.000000Z'
+      tags:
+        - Branch
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Branch
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: explicabo
+                brand_id:
+                  type: string
+                  description: ''
+                  example: perspiciatis
+                region_id:
+                  type: string
+                  description: ''
+                  example: rem
+                district_id:
+                  type: string
+                  description: ''
+                  example: dolorem
+                images:
+                  type: array
+                  description: 'Must be an image.'
+                  items:
+                    type: string
+                    format: binary
+              required:
+                - name
+                - brand_id
+                - region_id
+                - district_id
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Branch
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the branch.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/brands:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 1
+                      name: Texnomart
+                      image: 1713615145.texnomart.png
+                      created_at: '2024-04-20T12:12:25.000000Z'
+                      updated_at: '2024-04-20T12:12:25.000000Z'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        name: Texnomart
+                        image: 1713615145.texnomart.png
+                        created_at: '2024-04-20T12:12:25.000000Z'
+                        updated_at: '2024-04-20T12:12:25.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        name:
+                          type: string
+                          example: Texnomart
+                        image:
+                          type: string
+                          example: 1713615145.texnomart.png
+                        created_at:
+                          type: string
+                          example: '2024-04-20T12:12:25.000000Z'
+                        updated_at:
+                          type: string
+                          example: '2024-04-20T12:12:25.000000Z'
+      tags:
+        - Brand
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Brand
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: nqdihnkysmrzh
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image.'
+              required:
+                - name
+      security: []
+  '/api/brands/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 1
+                    name: Texnomart
+                    image: 1713615145.texnomart.png
+                    created_at: '2024-04-20T12:12:25.000000Z'
+                    updated_at: '2024-04-20T12:12:25.000000Z'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      name:
+                        type: string
+                        example: Texnomart
+                      image:
+                        type: string
+                        example: 1713615145.texnomart.png
+                      created_at:
+                        type: string
+                        example: '2024-04-20T12:12:25.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2024-04-20T12:12:25.000000Z'
+      tags:
+        - Brand
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Brand
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: tvlwqkg
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image.'
+              required:
+                - name
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Brand
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the brand.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/user:
+    get:
+      summary: ''
+      operationId: getApiUser
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  '/api/getBranchCountsByRegion/{regionId}':
+    get:
+      summary: ''
+      operationId: getApiGetBranchCountsByRegionRegionId
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example: []
+      tags:
+        - Main
+      security: []
+    parameters:
+      -
+        in: path
+        name: regionId
+        description: ''
+        example: debitis
+        required: true
+        schema:
+          type: string
+  /api/regions:
+    get:
+      summary: ''
+      operationId: getApiRegions
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example:
+                  -
+                    id: 1
+                    name: 'Qoraqalpog‘iston Respublikasi'
+                  -
+                    id: 2
+                    name: 'Andijon viloyati'
+                  -
+                    id: 3
+                    name: 'Buxoro viloyati'
+                  -
+                    id: 4
+                    name: 'Jizzax viloyati'
+                  -
+                    id: 5
+                    name: 'Qashqadaryo viloyati'
+                  -
+                    id: 6
+                    name: 'Navoiy viloyati'
+                  -
+                    id: 7
+                    name: 'Namangan viloyati'
+                  -
+                    id: 8
+                    name: 'Samarqand viloyati'
+                  -
+                    id: 9
+                    name: 'Surxandaryo viloyati'
+                  -
+                    id: 10
+                    name: 'Sirdaryo viloyati'
+                  -
+                    id: 11
+                    name: 'Toshkent viloyati'
+                  -
+                    id: 12
+                    name: 'Farg‘ona viloyati'
+                  -
+                    id: 13
+                    name: 'Xorazm viloyati'
+                  -
+                    id: 14
+                    name: 'Toshkent shahri'
+      tags:
+        - Main
+      security: []
+  /api/districts:
+    get:
+      summary: ''
+      operationId: getApiDistricts
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example:
+                  -
+                    id: 15
+                    name: 'Amudaryo tumani'
+                    region_id: 1
+                  -
+                    id: 16
+                    name: 'Beruniy tumani'
+                    region_id: 1
+                  -
+                    id: 17
+                    name: 'Kegayli tumani'
+                    region_id: 1
+                  -
+                    id: 18
+                    name: 'Qonliko‘l tumani'
+                    region_id: 1
+                  -
+                    id: 19
+                    name: 'Qorao‘zak tumani'
+                    region_id: 1
+                  -
+                    id: 20
+                    name: 'Qo‘ng‘irot tumani'
+                    region_id: 1
+                  -
+                    id: 21
+                    name: 'Mo‘ynoq tumani'
+                    region_id: 1
+                  -
+                    id: 22
+                    name: 'Nukus tumani'
+                    region_id: 1
+                  -
+                    id: 23
+                    name: 'Nukus shahri'
+                    region_id: 1
+                  -
+                    id: 24
+                    name: 'Taxtako‘pir tumani'
+                    region_id: 1
+                  -
+                    id: 25
+                    name: 'To‘rtko‘l tumani'
+                    region_id: 1
+                  -
+                    id: 26
+                    name: 'Xo‘jayli tumani'
+                    region_id: 1
+                  -
+                    id: 27
+                    name: 'CHimboy tumani'
+                    region_id: 1
+                  -
+                    id: 28
+                    name: 'SHumanay tumani'
+                    region_id: 1
+                  -
+                    id: 29
+                    name: 'Ellikqal‘a tumani'
+                    region_id: 1
+                  -
+                    id: 30
+                    name: 'Andijon shahri'
+                    region_id: 2
+                  -
+                    id: 31
+                    name: 'Andijon tumani'
+                    region_id: 2
+                  -
+                    id: 32
+                    name: 'Asaka tumani'
+                    region_id: 2
+                  -
+                    id: 33
+                    name: 'Baliqchi tumani'
+                    region_id: 2
+                  -
+                    id: 34
+                    name: 'Buloqboshi tumani'
+                    region_id: 2
+                  -
+                    id: 35
+                    name: 'Bo‘z tumani'
+                    region_id: 2
+                  -
+                    id: 36
+                    name: 'Jalaquduq tumani'
+                    region_id: 2
+                  -
+                    id: 37
+                    name: 'Izbosgan tumani'
+                    region_id: 2
+                  -
+                    id: 38
+                    name: 'Qorasuv shahri'
+                    region_id: 2
+                  -
+                    id: 39
+                    name: 'Qo‘rg‘ontepa tumani'
+                    region_id: 2
+                  -
+                    id: 40
+                    name: 'Marhamat tumani'
+                    region_id: 2
+                  -
+                    id: 41
+                    name: 'Oltinko‘l tumani'
+                    region_id: 2
+                  -
+                    id: 42
+                    name: 'Paxtaobod tumani'
+                    region_id: 2
+                  -
+                    id: 43
+                    name: 'Ulug‘nor tumani'
+                    region_id: 2
+                  -
+                    id: 44
+                    name: 'Xonabod tumani'
+                    region_id: 2
+                  -
+                    id: 45
+                    name: 'Xo‘jaobod shahri'
+                    region_id: 2
+                  -
+                    id: 46
+                    name: 'Shaxrixon tumani'
+                    region_id: 2
+                  -
+                    id: 47
+                    name: 'Buxoro shahri'
+                    region_id: 3
+                  -
+                    id: 48
+                    name: 'Buxoro tumani'
+                    region_id: 3
+                  -
+                    id: 49
+                    name: 'Vobkent tumani'
+                    region_id: 3
+                  -
+                    id: 50
+                    name: 'G‘ijduvon tumani'
+                    region_id: 3
+                  -
+                    id: 51
+                    name: 'Jondor tumani'
+                    region_id: 3
+                  -
+                    id: 52
+                    name: 'Kogon tumani'
+                    region_id: 3
+                  -
+                    id: 53
+                    name: 'Kogon shahri'
+                    region_id: 3
+                  -
+                    id: 54
+                    name: 'Qorako‘l tumani'
+                    region_id: 3
+                  -
+                    id: 55
+                    name: 'Qorovulbozor tumani'
+                    region_id: 3
+                  -
+                    id: 56
+                    name: 'Olot tumani'
+                    region_id: 3
+                  -
+                    id: 57
+                    name: 'Peshku tumani'
+                    region_id: 3
+                  -
+                    id: 58
+                    name: 'Romitan tumani'
+                    region_id: 3
+                  -
+                    id: 59
+                    name: 'Shofirkon tumani'
+                    region_id: 3
+                  -
+                    id: 60
+                    name: 'Arnasoy tumani'
+                    region_id: 4
+                  -
+                    id: 61
+                    name: 'Baxmal tumani'
+                    region_id: 4
+                  -
+                    id: 62
+                    name: 'G‘allaorol tumani'
+                    region_id: 4
+                  -
+                    id: 63
+                    name: 'Do‘stlik tumani'
+                    region_id: 4
+                  -
+                    id: 64
+                    name: 'Sh.Rashidov tumani'
+                    region_id: 4
+                  -
+                    id: 65
+                    name: 'Jizzax shahri'
+                    region_id: 4
+                  -
+                    id: 66
+                    name: 'Zarbdor tumani'
+                    region_id: 4
+                  -
+                    id: 67
+                    name: 'Zafarobod tumani'
+                    region_id: 4
+                  -
+                    id: 68
+                    name: 'Zomin tumani'
+                    region_id: 4
+                  -
+                    id: 69
+                    name: 'Mirzacho‘l tumani'
+                    region_id: 4
+                  -
+                    id: 70
+                    name: 'Paxtakor tumani'
+                    region_id: 4
+                  -
+                    id: 71
+                    name: 'Forish tumani'
+                    region_id: 4
+                  -
+                    id: 72
+                    name: 'Yangiobod tumani'
+                    region_id: 4
+                  -
+                    id: 73
+                    name: 'G‘uzor tumani'
+                    region_id: 5
+                  -
+                    id: 74
+                    name: 'Dehqonobod tumani'
+                    region_id: 5
+                  -
+                    id: 75
+                    name: 'Qamashi tumani'
+                    region_id: 5
+                  -
+                    id: 76
+                    name: 'Qarshi tumani'
+                    region_id: 5
+                  -
+                    id: 77
+                    name: 'Qarshi shahri'
+                    region_id: 5
+                  -
+                    id: 78
+                    name: 'Kasbi tumani'
+                    region_id: 5
+                  -
+                    id: 79
+                    name: 'Kitob tumani'
+                    region_id: 5
+                  -
+                    id: 80
+                    name: 'Koson tumani'
+                    region_id: 5
+                  -
+                    id: 81
+                    name: 'Mirishkor tumani'
+                    region_id: 5
+                  -
+                    id: 82
+                    name: 'Muborak tumani'
+                    region_id: 5
+                  -
+                    id: 83
+                    name: 'Nishon tumani'
+                    region_id: 5
+                  -
+                    id: 84
+                    name: 'Chiroqchi tumani'
+                    region_id: 5
+                  -
+                    id: 85
+                    name: 'Shahrisabz tumani'
+                    region_id: 5
+                  -
+                    id: 86
+                    name: 'Yakkabog‘ tumani'
+                    region_id: 5
+                  -
+                    id: 87
+                    name: 'Zarafshon shahri'
+                    region_id: 6
+                  -
+                    id: 88
+                    name: 'Karmana tumani'
+                    region_id: 6
+                  -
+                    id: 89
+                    name: 'Qiziltepa tumani'
+                    region_id: 6
+                  -
+                    id: 90
+                    name: 'Konimex tumani'
+                    region_id: 6
+                  -
+                    id: 91
+                    name: 'Navbahor tumani'
+                    region_id: 6
+                  -
+                    id: 92
+                    name: 'Navoiy shahri'
+                    region_id: 6
+                  -
+                    id: 93
+                    name: 'Nurota tumani'
+                    region_id: 6
+                  -
+                    id: 94
+                    name: 'Tomdi tumani'
+                    region_id: 6
+                  -
+                    id: 95
+                    name: 'Uchquduq tumani'
+                    region_id: 6
+                  -
+                    id: 96
+                    name: 'Xatirchi tumani'
+                    region_id: 6
+                  -
+                    id: 97
+                    name: 'Kosonsoy tumani'
+                    region_id: 7
+                  -
+                    id: 98
+                    name: 'Mingbuloq tumani'
+                    region_id: 7
+                  -
+                    id: 99
+                    name: 'Namangan tumani'
+                    region_id: 7
+                  -
+                    id: 100
+                    name: 'Namangan shahri'
+                    region_id: 7
+                  -
+                    id: 101
+                    name: 'Norin tumani'
+                    region_id: 7
+                  -
+                    id: 102
+                    name: 'Pop tumani'
+                    region_id: 7
+                  -
+                    id: 103
+                    name: 'To‘raqo‘rg‘on tumani'
+                    region_id: 7
+                  -
+                    id: 104
+                    name: 'Uychi tumani'
+                    region_id: 7
+                  -
+                    id: 105
+                    name: 'Uchqo‘rg‘on tumani'
+                    region_id: 7
+                  -
+                    id: 106
+                    name: 'Chortoq tumani'
+                    region_id: 7
+                  -
+                    id: 107
+                    name: 'Chust tumani'
+                    region_id: 7
+                  -
+                    id: 108
+                    name: 'Yangiqo‘rg‘on tumani'
+                    region_id: 7
+                  -
+                    id: 109
+                    name: 'Bulung‘ur tumani'
+                    region_id: 8
+                  -
+                    id: 110
+                    name: 'Jomboy tumani'
+                    region_id: 8
+                  -
+                    id: 111
+                    name: 'Ishtixon tumani'
+                    region_id: 8
+                  -
+                    id: 112
+                    name: 'Kattaqo‘rg‘on tumani'
+                    region_id: 8
+                  -
+                    id: 113
+                    name: 'Kattaqo‘rg‘on shahri'
+                    region_id: 8
+                  -
+                    id: 114
+                    name: 'Qo‘shrabot tumani'
+                    region_id: 8
+                  -
+                    id: 115
+                    name: 'Narpay tumani'
+                    region_id: 8
+                  -
+                    id: 116
+                    name: 'Nurabod tumani'
+                    region_id: 8
+                  -
+                    id: 117
+                    name: 'Oqdaryo tumani'
+                    region_id: 8
+                  -
+                    id: 118
+                    name: 'Payariq tumani'
+                    region_id: 8
+                  -
+                    id: 119
+                    name: 'Pastarg‘om tumani'
+                    region_id: 8
+                  -
+                    id: 120
+                    name: 'Paxtachi tumani'
+                    region_id: 8
+                  -
+                    id: 121
+                    name: 'Samarqand tumani'
+                    region_id: 8
+                  -
+                    id: 122
+                    name: 'Samarqand shahri'
+                    region_id: 8
+                  -
+                    id: 123
+                    name: 'Toyloq tumani'
+                    region_id: 8
+                  -
+                    id: 124
+                    name: 'Urgut tumani'
+                    region_id: 8
+                  -
+                    id: 125
+                    name: 'Angor tumani'
+                    region_id: 9
+                  -
+                    id: 126
+                    name: 'Boysun tumani'
+                    region_id: 9
+                  -
+                    id: 127
+                    name: 'Denov tumani'
+                    region_id: 9
+                  -
+                    id: 128
+                    name: 'Jarqo‘rg‘on tumani'
+                    region_id: 9
+                  -
+                    id: 129
+                    name: 'Qiziriq tumani'
+                    region_id: 9
+                  -
+                    id: 130
+                    name: 'Qo‘mqo‘rg‘on tumani'
+                    region_id: 9
+                  -
+                    id: 131
+                    name: 'Muzrabot tumani'
+                    region_id: 9
+                  -
+                    id: 132
+                    name: 'Oltinsoy tumani'
+                    region_id: 9
+                  -
+                    id: 133
+                    name: 'Sariosiy tumani'
+                    region_id: 9
+                  -
+                    id: 134
+                    name: 'Termiz tumani'
+                    region_id: 9
+                  -
+                    id: 135
+                    name: 'Termiz shahri'
+                    region_id: 9
+                  -
+                    id: 136
+                    name: 'Uzun tumani'
+                    region_id: 9
+                  -
+                    id: 137
+                    name: 'Sherobod tumani'
+                    region_id: 9
+                  -
+                    id: 138
+                    name: 'Sho‘rchi tumani'
+                    region_id: 9
+                  -
+                    id: 139
+                    name: 'Boyovut tumani'
+                    region_id: 10
+                  -
+                    id: 140
+                    name: 'Guliston tumani'
+                    region_id: 10
+                  -
+                    id: 141
+                    name: 'Guliston shahri'
+                    region_id: 10
+                  -
+                    id: 142
+                    name: 'Mirzaobod tumani'
+                    region_id: 10
+                  -
+                    id: 143
+                    name: 'Oqoltin tumani'
+                    region_id: 10
+                  -
+                    id: 144
+                    name: 'Sayxunobod tumani'
+                    region_id: 10
+                  -
+                    id: 145
+                    name: 'Sardoba tumani'
+                    region_id: 10
+                  -
+                    id: 146
+                    name: 'Sirdaryo tumani'
+                    region_id: 10
+                  -
+                    id: 147
+                    name: 'Xavos tumani'
+                    region_id: 10
+                  -
+                    id: 148
+                    name: 'Shirin shahri'
+                    region_id: 10
+                  -
+                    id: 149
+                    name: 'Yangier shahri'
+                    region_id: 10
+                  -
+                    id: 150
+                    name: 'Angiren shahri'
+                    region_id: 11
+                  -
+                    id: 151
+                    name: 'Bekabod tumani'
+                    region_id: 11
+                  -
+                    id: 152
+                    name: 'Bekabod shahri'
+                    region_id: 11
+                  -
+                    id: 153
+                    name: 'Bo‘ka tumani'
+                    region_id: 11
+                  -
+                    id: 154
+                    name: 'Bo‘stonliq tumani'
+                    region_id: 11
+                  -
+                    id: 155
+                    name: 'Zangiota tumani'
+                    region_id: 11
+                  -
+                    id: 156
+                    name: 'Qibray tumani'
+                    region_id: 11
+                  -
+                    id: 157
+                    name: 'Quyichirchiq tumani'
+                    region_id: 11
+                  -
+                    id: 158
+                    name: 'Oqqo‘rg‘on tumani'
+                    region_id: 11
+                  -
+                    id: 159
+                    name: 'Olmaliq shahri'
+                    region_id: 11
+                  -
+                    id: 160
+                    name: 'Ohangaron tumani'
+                    region_id: 11
+                  -
+                    id: 161
+                    name: 'Parkent tumani'
+                    region_id: 11
+                  -
+                    id: 162
+                    name: 'Piskent tumani'
+                    region_id: 11
+                  -
+                    id: 163
+                    name: 'O‘rtachirchiq tumani'
+                    region_id: 11
+                  -
+                    id: 164
+                    name: 'Chinoz tumani'
+                    region_id: 11
+                  -
+                    id: 165
+                    name: 'Chirchiq shahri'
+                    region_id: 11
+                  -
+                    id: 166
+                    name: 'Yuqorichirchiq tumani'
+                    region_id: 11
+                  -
+                    id: 167
+                    name: 'Yangiyo‘l tumani'
+                    region_id: 11
+                  -
+                    id: 168
+                    name: 'Beshariq tumani'
+                    region_id: 12
+                  -
+                    id: 169
+                    name: 'Bog‘dod tumani'
+                    region_id: 12
+                  -
+                    id: 170
+                    name: 'Buvayda tumani'
+                    region_id: 12
+                  -
+                    id: 171
+                    name: 'Dang‘ara tumani'
+                    region_id: 12
+                  -
+                    id: 172
+                    name: 'Yozyovon tumani'
+                    region_id: 12
+                  -
+                    id: 173
+                    name: 'Quva tumani'
+                    region_id: 12
+                  -
+                    id: 174
+                    name: 'Quvasoy shahri'
+                    region_id: 12
+                  -
+                    id: 175
+                    name: 'Qo‘qon shahri'
+                    region_id: 12
+                  -
+                    id: 176
+                    name: 'Qo‘shtepa tumani'
+                    region_id: 12
+                  -
+                    id: 177
+                    name: 'Marg‘ilon shahri'
+                    region_id: 12
+                  -
+                    id: 178
+                    name: 'Oltiariq tumani'
+                    region_id: 12
+                  -
+                    id: 179
+                    name: 'Rishton tumani'
+                    region_id: 12
+                  -
+                    id: 180
+                    name: 'So‘x tumani'
+                    region_id: 12
+                  -
+                    id: 181
+                    name: 'Toshloq tumani'
+                    region_id: 12
+                  -
+                    id: 182
+                    name: 'Uchko‘prik tumani'
+                    region_id: 12
+                  -
+                    id: 183
+                    name: 'O‘zbekiston tumani'
+                    region_id: 12
+                  -
+                    id: 184
+                    name: 'Farg‘ona tumani'
+                    region_id: 12
+                  -
+                    id: 185
+                    name: 'Farg‘ona shahri'
+                    region_id: 12
+                  -
+                    id: 186
+                    name: 'Furqat tumani'
+                    region_id: 12
+                  -
+                    id: 187
+                    name: 'Bog‘ot tumani'
+                    region_id: 13
+                  -
+                    id: 188
+                    name: 'Gurlan tumani'
+                    region_id: 13
+                  -
+                    id: 189
+                    name: 'Qo‘shko‘pir tumani'
+                    region_id: 13
+                  -
+                    id: 190
+                    name: 'Urganch tumani'
+                    region_id: 13
+                  -
+                    id: 191
+                    name: 'Urganch shahri'
+                    region_id: 13
+                  -
+                    id: 192
+                    name: 'Xiva tumani'
+                    region_id: 13
+                  -
+                    id: 193
+                    name: 'Xazarasp tumani'
+                    region_id: 13
+                  -
+                    id: 194
+                    name: 'Xonqa tumani'
+                    region_id: 13
+                  -
+                    id: 195
+                    name: 'Shavot tumani'
+                    region_id: 13
+                  -
+                    id: 196
+                    name: 'Yangiariq tumani'
+                    region_id: 13
+                  -
+                    id: 197
+                    name: 'Yangibozor tumani'
+                    region_id: 13
+                  -
+                    id: 198
+                    name: 'Bektimer tumani'
+                    region_id: 14
+                  -
+                    id: 199
+                    name: 'M.Ulug‘bek tumani'
+                    region_id: 14
+                  -
+                    id: 200
+                    name: 'Mirobod tumani'
+                    region_id: 14
+                  -
+                    id: 201
+                    name: 'Olmazor tumani'
+                    region_id: 14
+                  -
+                    id: 202
+                    name: 'Sergeli tumani'
+                    region_id: 14
+                  -
+                    id: 203
+                    name: 'Uchtepa tumani'
+                    region_id: 14
+                  -
+                    id: 204
+                    name: 'Yashnobod tumani'
+                    region_id: 14
+                  -
+                    id: 205
+                    name: 'Chilonzor tumani'
+                    region_id: 14
+                  -
+                    id: 206
+                    name: 'Shayxontohur tumani'
+                    region_id: 14
+                  -
+                    id: 207
+                    name: 'Yunusobod tumani'
+                    region_id: 14
+                  -
+                    id: 208
+                    name: 'Yakkasaroy tumani'
+                    region_id: 14
+                  -
+                    id: 209
+                    name: 'Taxiatosh shahri'
+                    region_id: 1
+                  -
+                    id: 210
+                    name: 'Asaka shahri'
+                    region_id: 2
+                  -
+                    id: 211
+                    name: 'Bandixon tumani'
+                    region_id: 9
+                  -
+                    id: 212
+                    name: 'Ohangaron shahri'
+                    region_id: 11
+                  -
+                    id: 213
+                    name: 'Yangiyo‘l shahri'
+                    region_id: 11
+                  -
+                    id: 215
+                    name: 'Toshkent tumani'
+                    region_id: 11
+                  -
+                    id: 216
+                    name: "Bo'zatov tumani"
+                    region_id: 1
+                  -
+                    id: 217
+                    name: 'Tuproqqala tumani'
+                    region_id: 13
+                  -
+                    id: 218
+                    name: "Ko'kdala tumani"
+                    region_id: 5
+      tags:
+        - Main
+      security: []
+  /api/currencies:
+    get:
+      summary: ''
+      operationId: getApiCurrencies
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: success
+                properties:
+                  success:
+                    type: string
+                    example: success
+      tags:
+        - Main
+      security: []
+  /api/users:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 1
+                      full_name: 'Rahmonov Otabek'
+                      phone_number: '+998998624122'
+                      created_at: '2024-04-20T15:37:10.000000Z'
+                      updated_at: '2024-04-20T16:57:15.000000Z'
+                      is_active: 0
+                      last_login: '2024-04-10 15:51:42'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        full_name: 'Rahmonov Otabek'
+                        phone_number: '+998998624122'
+                        created_at: '2024-04-20T15:37:10.000000Z'
+                        updated_at: '2024-04-20T16:57:15.000000Z'
+                        is_active: 0
+                        last_login: '2024-04-10 15:51:42'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        full_name:
+                          type: string
+                          example: 'Rahmonov Otabek'
+                        phone_number:
+                          type: string
+                          example: '+998998624122'
+                        created_at:
+                          type: string
+                          example: '2024-04-20T15:37:10.000000Z'
+                        updated_at:
+                          type: string
+                          example: '2024-04-20T16:57:15.000000Z'
+                        is_active:
+                          type: integer
+                          example: 0
+                        last_login:
+                          type: string
+                          example: '2024-04-10 15:51:42'
+      tags:
+        - User
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - User
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                full_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ffzoaggvvnlnaoflhvpqcmdx
+                phone_number:
+                  type: string
+                  description: 'Must not be greater than 13 characters.'
+                  example: sziyfn
+                password:
+                  type: string
+                  description: 'Must be at least 6 characters.'
+                  example: '{G)}awn#%{zI-:vW?U1'
+              required:
+                - full_name
+                - phone_number
+                - password
+      security: []
+  '/api/users/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 1
+                    full_name: 'Rahmonov Otabek'
+                    phone_number: '+998998624122'
+                    created_at: '2024-04-20T15:37:10.000000Z'
+                    updated_at: '2024-04-20T16:57:15.000000Z'
+                    is_active: 0
+                    last_login: '2024-04-10 15:51:42'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      full_name:
+                        type: string
+                        example: 'Rahmonov Otabek'
+                      phone_number:
+                        type: string
+                        example: '+998998624122'
+                      created_at:
+                        type: string
+                        example: '2024-04-20T15:37:10.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2024-04-20T16:57:15.000000Z'
+                      is_active:
+                        type: integer
+                        example: 0
+                      last_login:
+                        type: string
+                        example: '2024-04-10 15:51:42'
+      tags:
+        - User
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - User
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                full_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ffhureu
+                phone_number:
+                  type: string
+                  description: 'Must not be greater than 13 characters.'
+                  example: oizejdujcbt
+                password:
+                  type: string
+                  description: 'Must be at least 6 characters.'
+                  example: ';|7]kiu'
+              required:
+                - full_name
+                - phone_number
+                - password
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - User
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the user.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+tags:
+  -
+    name: Auth
+    description: ''
+  -
+    name: Branch
+    description: ''
+  -
+    name: Brand
+    description: ''
+  -
+    name: Endpoints
+    description: ''
+  -
+    name: Main
+    description: ''
+  -
+    name: User
+    description: ''

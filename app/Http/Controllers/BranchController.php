@@ -12,6 +12,10 @@ use Spatie\QueryBuilder\QueryBuilder;
 use App\Models\Branch;
 use App\Helpers\UploadHelper;
 
+/**
+ * @group Branch
+ * 
+ */
 class BranchController extends Controller
 {
     /**

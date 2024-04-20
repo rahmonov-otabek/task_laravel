@@ -11,6 +11,10 @@ use App\Http\Requests\RegisterRequest;
 
 use App\Models\User;
 
+/**
+ * @group Auth
+ * 
+ */
 class AuhtController extends Controller
 {
 
