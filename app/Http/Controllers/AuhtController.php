@@ -40,6 +40,8 @@ class AuhtController extends Controller
         }
 
         $user = User::where('phone_number', $validated['phone_number'])->first();
+        $user->last_login = now();
+        $user->update();
 
         return response()->json([
             'access_token' => $user->createToken('api_token')->plainTextToken,
