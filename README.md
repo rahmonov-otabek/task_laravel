@@ -13,11 +13,11 @@
 
 ### 1. Clone the repository
 
-`git clone https://github.com/organization/project.git`
+`git clone https://github.com/rahmonov-otabek/task_laravel.git`
 
 ### 2. cd into the project 
 
-`cd project_name`
+`cd task_laravel`
 
 ### 3. Install composer dependencies 
 
