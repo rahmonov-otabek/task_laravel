@@ -15,6 +15,11 @@ class District extends Model
         'region_id',
     ];
 
+    protected $hidden = [
+        'created_at',
+        'updated_at' 
+    ];
+
     public function region()
     {
         return $this->belongsTo(Region::class, 'region_id');

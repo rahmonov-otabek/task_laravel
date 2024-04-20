@@ -32,6 +32,7 @@ Route::apiResource('users', UsersController::class);
 Route::apiResource('brands', BrandController::class);
 Route::apiResource('branches', BranchController::class);
 
+Route::get('getBranchCountsByRegion/{regionId}', [MainController::class, 'getBranchCountsByRegion']);
 Route::get('regions', [MainController::class, "regionsList"]);
 Route::get('districts', [MainController::class, "districtsList"]);
 Route::get('currencies', [MainController::class, "currencies"]);

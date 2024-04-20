@@ -14,6 +14,11 @@ class Region extends Model
         'name', 
     ];
 
+    protected $hidden = [
+        'created_at',
+        'updated_at' 
+    ];
+
     public function districts()
     {
         return $this->hasMany(District::class, 'region_id');

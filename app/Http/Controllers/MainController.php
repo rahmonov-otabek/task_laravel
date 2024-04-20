@@ -40,4 +40,16 @@ class MainController extends Controller
         }
         return response()->json(['success' => 'success'], 200);
     }
+
+    
+    public function getBranchCountsByRegion($regionId)
+    {
+        $regions = Region::with(['districts' => function ($query) {
+            $query->withCount('branches');
+        }])
+        ->where('id', $regionId)
+        ->get();
+         
+        return $regions;
+    }
 }
