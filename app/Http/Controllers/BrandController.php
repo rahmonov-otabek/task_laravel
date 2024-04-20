@@ -31,7 +31,9 @@ class BrandController extends Controller
     {
         $validated = $request->validated(); 
         
-        $validated['image'] = UploadHelper::uploadBrandImage($request);
+        if(!empty($validated['image'])) { 
+            $validated['image'] = UploadHelper::uploadBrandImage($request);
+        } 
         
         $brand = Brand::create($validated);
 
