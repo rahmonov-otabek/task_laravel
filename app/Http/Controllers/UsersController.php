@@ -31,7 +31,7 @@ class UsersController extends Controller
 
         $user = User::create($validated);
 
-        return new UserResource($task);
+        return new UserResource($user);
     }
 
     /**
