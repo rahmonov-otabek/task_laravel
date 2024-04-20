@@ -10,6 +10,8 @@ use App\Http\Resources\BrandResource;
 use App\Http\Resources\BrandCollection;
 use File;
 
+use App\Helpers\UploadHelper;
+
 class BrandController extends Controller
 {
     /**
@@ -27,15 +29,10 @@ class BrandController extends Controller
      */
     public function store(StoreBrandRequest $request)
     {
-        $validated = $request->validated();
+        $validated = $request->validated(); 
         
-        if($request->hasFile('image')) {
-            $file = $request->file('image');
-            $image_name = time().".".$file->getClientOriginalExtension();
-            $file->move(public_path('uploads/images/brand'), $image_name);
-            $validated['image'] = $image_name;
-        }
-
+        $validated['image'] = UploadHelper::uploadBrandImage($request);
+        
         $brand = Brand::create($validated);
 
         return new BrandResource($brand);
@@ -54,17 +51,11 @@ class BrandController extends Controller
      */
     public function update(UpdateBrandRequest $request, Brand $brand)
     {
-        $validated = $request->validated();
-         
-        if($request->hasFile('image')) { 
-            $imagePath = public_path('uploads/images/brand/'.$brand->image);
-            if(File::exists($imagePath)){
-                unlink($imagePath);
-            }
-            $file = $request->file('image');
-            $image_name = time().".".$file->getClientOriginalExtension();
-            $file->move(public_path('uploads/images/brand'), $image_name);
-            $validated['image'] = $image_name;
+        $validated = $request->validated(); 
+
+        if(!empty($validated['image'])) {  
+            UploadHelper::deleteOldBrandImage($brand->image);
+            $validated['image'] = UploadHelper::uploadBrandImage($request);
         }
 
         $brand->update($validated); 
