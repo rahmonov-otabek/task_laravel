@@ -10,6 +10,7 @@ use App\Http\Resources\BranchCollection;
 use Spatie\QueryBuilder\QueryBuilder;
 
 use App\Models\Branch;
+use App\Helpers\UploadHelper;
 
 class BranchController extends Controller
 {
@@ -32,19 +33,12 @@ class BranchController extends Controller
     {
         $validated = $request->validated();
 
-        $branch = Branch::create($validated);
- 
-        if ($request->hasFile('images')) {
-            foreach ($request->file('images') as $file) {
-                $image_name = time().".".$file->getClientOriginalName();
-                $file->move(public_path('uploads/images/branch'), $image_name);
+        $branch = Branch::create($validated);  
 
-                $branch->images()->create([
-                    "image" => $image_name,
-                    "branch_id" => $branch->id
-                ]); 
-            }
-        }
+        if(!empty($validated['images'])) { 
+            UploadHelper::uploadBranchImages($request, $branch);
+        } 
+        
 
         return new BranchResource($branch);
     }
@@ -68,17 +62,10 @@ class BranchController extends Controller
 
         $branch->update($validated);
  
-        if ($request->hasFile('images')) {
-            foreach ($request->file('images') as $file) {
-                $image_name = time().".".$file->getClientOriginalName();
-                $file->move(public_path('uploads/images/branch'), $image_name);
-
-                $branch->images()->create([
-                    "image" => $image_name,
-                    "branch_id" => $branch->id
-                ]); 
-            }
-        }
+        if(!empty($validated['images'])) {
+            UploadHelper::deleteOldBranchImages($branch);
+            UploadHelper::uploadBranchImages($request, $branch);
+        }  
 
         return new BranchResource($branch);
     }
