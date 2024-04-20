@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('image');
             $table->foreignId('branch_id')->constrained('branches')->cascadeOnDelete();
-            $table->boolean('use_in_slider')->default(false);
             $table->timestamps();
         });
     }

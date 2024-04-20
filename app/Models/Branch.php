@@ -35,7 +35,7 @@ class Branch extends Model
         return $this->belongsTo(District::class, 'district_id');
     }
 
-    public function branchImages()
+    public function images()
     {
         return $this->hasMany(BranchImages::class, 'branch_id');
     }

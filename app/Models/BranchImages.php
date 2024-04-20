@@ -12,8 +12,7 @@ class BranchImages extends Model
 
     protected $fillable = [
         'image',
-        'branch_id',
-        'use_in_slider',
+        'branch_id'
     ];
 
     public function branch()

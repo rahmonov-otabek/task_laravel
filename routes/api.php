@@ -7,6 +7,7 @@ use App\Http\Controllers\AuhtController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\BranchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,7 @@ Route::middleware('auth:sanctum')->post('logout', [AuhtController::class, 'logou
 
 Route::apiResource('users', UsersController::class);
 Route::apiResource('brands', BrandController::class);
+Route::apiResource('branches', BranchController::class);
 
 Route::get('regions', [MainController::class, "regionsList"]);
 Route::get('districts', [MainController::class, "districtsList"]);
